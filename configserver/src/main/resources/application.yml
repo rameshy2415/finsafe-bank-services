@@ -1,0 +1,27 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    #active: native
+    active: git
+  cloud:
+    config:
+      server:
+#         native:
+#         search-locations: "classpath:/config"
+#         search-locations: "file:///Users//techinsights//Documents//config"
+        git:
+          uri: "https://github.com/rameshy2415/finsafe-bank-services-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
