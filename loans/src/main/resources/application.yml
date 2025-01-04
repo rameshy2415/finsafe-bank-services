@@ -17,3 +17,25 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+#  config:
+#    import:
+#      - "application-qa.yml"
+#      - "application-prod.yml"
+  profiles:
+    active:
+      - "qa"
+
+
+
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to FinSafe Bank loans related local APIs "
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@techinsights.com"
+  onCallSupport:
+    - (+91) 8270078469
+    - (+91) 8270078466
