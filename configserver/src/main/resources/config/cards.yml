@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to FinSafe Bank cards related local APIs "
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "john@techinsights.com"
+  onCallSupport:
+    - (+91) 8270078469
+    - (+91) 8270078466
