@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -31,12 +32,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @RequiredArgsConstructor
 @Validated
+@Data
 public class CardController {
     private final ICardService cardService;
 
-    private final Environment environment;
+    private final  Environment environment;
 
-    private final CardContactInfoDTO cardContactInfoDTO;
+    private final  CardContactInfoDTO cardContactInfoDTO;
 
     @Value("${build.version}")
     private String buildVersion;
