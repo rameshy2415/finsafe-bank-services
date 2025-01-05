@@ -9,6 +9,7 @@ import lombok.*;
 
 @Entity
 @Data
+@Table(name = "loans")
 public class LoanEntity extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
