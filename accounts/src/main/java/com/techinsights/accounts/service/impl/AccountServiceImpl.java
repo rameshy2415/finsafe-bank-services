@@ -10,7 +10,7 @@ import com.techinsights.accounts.exception.ResourceNotFoundException;
 import com.techinsights.accounts.mapper.AccountsMapper;
 import com.techinsights.accounts.mapper.CustomerMapper;
 import com.techinsights.accounts.repository.AccountRepository;
-import com.techinsights.accounts.repository.CustomerRepositiry;
+import com.techinsights.accounts.repository.CustomerRepository;
 import com.techinsights.accounts.service.IAccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ public class AccountServiceImpl implements IAccountService {
 
     private final AccountRepository accountRepository;
 
-    private final CustomerRepositiry customerRepositiry;
+    private final CustomerRepository customerRepositiry;
 
 
 

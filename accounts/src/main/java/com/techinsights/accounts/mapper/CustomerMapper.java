@@ -1,6 +1,7 @@
 package com.techinsights.accounts.mapper;
 
 import com.techinsights.accounts.dto.CustomerDTO;
+import com.techinsights.accounts.dto.CustomerDetailsDTO;
 import com.techinsights.accounts.entity.CustomerEntity;
 
 public class CustomerMapper {
@@ -17,6 +18,13 @@ public class CustomerMapper {
         customer.setEmail(customerDto.getEmail());
         customer.setMobileNumber(customerDto.getMobileNumber());
         return customer;
+    }
+
+    public static CustomerDetailsDTO mapToCustomerDetailsDto(CustomerEntity customer, CustomerDetailsDTO customerDetailsDto) {
+        customerDetailsDto.setName(customer.getName());
+        customerDetailsDto.setEmail(customer.getEmail());
+        customerDetailsDto.setMobileNumber(customer.getMobileNumber());
+        return customerDetailsDto;
     }
 
 }
