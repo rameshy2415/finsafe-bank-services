@@ -16,6 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @Validated
 @Data
+@Slf4j
 public class CardController {
     private final ICardService cardService;
 
@@ -93,9 +95,12 @@ public class CardController {
             )
     })
     @GetMapping("/fetch")
-    public ResponseEntity<CardDTO> fetchCardDetails(@RequestParam
+    public ResponseEntity<CardDTO> fetchCardDetails(
+            @RequestHeader("finsafebank-correlation-id") String correlationID,
+            @RequestParam
                                                      @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
                                                      String mobileNumber) {
+        log.debug("finsafe Bank-correlation-id found: {} ", correlationID);
         CardDTO cardsDto = cardService.fetchCard(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(cardsDto);
     }
