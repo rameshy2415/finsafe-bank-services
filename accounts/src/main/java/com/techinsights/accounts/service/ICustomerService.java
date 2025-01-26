@@ -9,5 +9,5 @@ public interface ICustomerService {
      * @param correlationID - UUID of the correlation
      * @return Customer Details based on a given mobileNumber
      */
-    CustomerDetailsDTO fetchCustomerDetails(String mobileNumber, String correlationID);
+    CustomerDetailsDTO fetchCustomerDetails(String correlationID, String mobileNumber);
 }
