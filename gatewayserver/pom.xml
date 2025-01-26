@@ -47,6 +47,14 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,7 +86,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>rameshy2415/${project.artifactId}:s9</image>
+						<image>rameshy2415/${project.artifactId}:s10</image>
 					</to>
 				</configuration>
 			</plugin>
