@@ -84,7 +84,7 @@
 				<version>3.3.2</version>
 				<configuration>
 					<to>
-						<image>rameshy2415/${project.artifactId}:s13</image>
+						<image>rameshy2415/${project.artifactId}:s14</image>
 					</to>
 				</configuration>
 			</plugin>
